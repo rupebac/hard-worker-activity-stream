@@ -1,17 +1,16 @@
-class BitbucketAuth{
+class BitbucketAuth {
 
-		authenticate(){
-		    let xhttp = new XMLHttpRequest();
+    authenticate() {
+        let xhttp = new XMLHttpRequest();
 
-		    xhttp.open("GET", "http://localhost:8080/api/v0/bitbucket/auth", true);
+        xhttp.open("GET", "http://localhost:8080/api/v0/bitbucket/auth", true);
 
-		    xhttp.onreadystatechange = function()
-		    {
-		        window.location.href = xhttp.responseURL;
-		    };
+        xhttp.onreadystatechange = function() {
+            window.location.href = xhttp.responseURL;
+        };
 
-		    xhttp.send();
-		}
+        xhttp.send();
+    }
 
 
 }

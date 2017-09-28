@@ -1,12 +1,12 @@
-class Activity{
+class Activity {
 
-	constructor(element) {
-		let $ = document.querySelector.bind(document);
-		this._element = $(".list-group");
-	}
+    constructor(element) {
+        let $ = document.querySelector.bind(document);
+        this._element = $(".list-group");
+    }
 
-  _template(act){
-	return  `
+    _template(act) {
+        return `
 			<div class="list-group-item list-group-item-action flex-column align-items-start" style="margin-top:5px">
 				<div class="d-flex w-100 justify-content-between">
 				    <a href=${act.link} target="_blank">
@@ -20,12 +20,12 @@ class Activity{
 		`
     };
 
-	update(act) {
-		this._element.insertAdjacentHTML( 'beforeend', this._template(act) );
-	};
+    update(act) {
+        this._element.insertAdjacentHTML('beforeend', this._template(act));
+    };
 
-	clean() {
-	  this._element.innerHTML = '';
-	};
+    clean() {
+        this._element.innerHTML = '';
+    };
 
 }
