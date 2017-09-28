@@ -1,0 +1,24 @@
+{
+  "name": "devacts",
+  "authors": [
+    "Matheus <mgustavo@ciandt.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "https://github.com/mgustavocoder/devtrack",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6",
+    "popover.css": "^0.0.2",
+    "popover": "*",
+    "tether": "^1.4.0"
+  }
+}
