@@ -18,11 +18,6 @@ class App {
 
         this.clearList();
 
-        if (!this._filter.repoList && !this._filter.jiraUser) {
-            new Alert('Warning!', 'Blank filter.', 'warning');
-            return;
-        }
-
 
         bitbucketAccessToken = cookieHelper.getCookie('bitbucketAccessToken');
         if (this._filter.repoList && !bitbucketAccessToken) {
