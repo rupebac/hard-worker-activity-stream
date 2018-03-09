@@ -3,7 +3,6 @@ package api.jira
 import api.ClientApi
 import org.json.JSONArray
 import org.json.JSONException
-import org.json.JSONObject
 import org.json.XML
 import java.io.FileInputStream
 import java.io.IOException
@@ -30,7 +29,7 @@ class JiraFeedClient : ClientApi() {
 
         return try {
             val respAsString = performRequest("Basic", acessToken, url)
-            (XML.toJSONObject(respAsString).get("feed") as JSONObject).get("entry") as JSONArray
+            (XML.toJSONObject(respAsString).getJSONObject("feed")).getJSONArray("entry")
         } catch (e: IOException) {
             JSONArray()
         } catch (e: JSONException) {
