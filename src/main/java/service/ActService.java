@@ -48,7 +48,6 @@ public class ActService {
 					.filter(act -> act.getDate().getDayOfMonth() == date.getDayOfMonth())
 					.filter(act -> act.getDate().getMonth() == date.getMonth())
 					.filter(act -> act.getDate().getYear() == date.getYear())
-					.filter(act -> !(act.getSummary().contains("logged '")))
 					.collect(Collectors.toList());
 
 		actList.sort(Comparator.comparing((IAct act) -> act.getDate().toLocalDateTime()));

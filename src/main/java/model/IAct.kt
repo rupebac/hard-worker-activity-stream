@@ -8,5 +8,6 @@ interface IAct {
     val link: String?
     val date: ZonedDateTime?
     val summary: String?
+    val description: String?
     val userName: String?
 }

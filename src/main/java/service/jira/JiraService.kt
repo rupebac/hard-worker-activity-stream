@@ -13,8 +13,7 @@ internal class JiraService {
         val entries = JiraFeedClient().getActivityStream(user, date)
 
         return entries.map { JiraActivity(it as JSONObject) }
-                .filter { !it.summary!!.contains("logged") }
-                .filter { it.summary!!.contains("CMS-") }
+                .filter { !it.description!!.contains("logged") }
                 .distinctBy { it -> it.link }
     }
 

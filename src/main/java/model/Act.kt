@@ -8,5 +8,6 @@ abstract class Act : IAct {
     override var link: String? = null
     override var date: ZonedDateTime? = null
     override var summary: String? = null
+    override var description: String? = null
     override var userName: String? = null
 }
